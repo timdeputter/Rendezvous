@@ -17,21 +17,33 @@ defmodule RendezvousTest do
   end
 
   test "Distributes objects evenly on buckets", context do
-    buckets_for_objects = get_buckets(generate_randoms(600), context[:buckets])
-    assert objects_evenly_distributed_on buckets_for_objects, context[:buckets]
+    buckets_for_objects = get_buckets(generate_random_values, context[:buckets])
+    assert contains_elements_in_equal_sized_parts(buckets_for_objects, context[:buckets])
   end
 
-  defp objects_evenly_distributed_on buckets_for_objects, buckets =[current_bucket | rest] do
-    between get_percentage_of(buckets_for_objects, current_bucket), 32, 34
-    && objects_evenly_distributed_on(buckets_for_objects,rest)
+  test "When a buckets fails only the objects in that bucket have to be moved", context do
+    bucketsWithoutB = List.delete(context[:buckets], "Node B")
+    assert get_hrwbucket("A",bucketsWithoutB) == get_hrwbucket("A",context[:buckets])
+    assert get_hrwbucket("AAAF",bucketsWithoutB) == get_hrwbucket("AAAF",context[:buckets])
+    assert get_hrwbucket("AA",bucketsWithoutB) != get_hrwbucket("AA",context[:buckets])
+    assert Enum.member? bucketsWithoutB, get_hrwbucket("AA",bucketsWithoutB)
   end
 
-  defp objects_evenly_distributed_on _, [] do
+  defp contains_elements_in_equal_sized_parts buckets_for_objects, [current_bucket | rest] do
+    between(get_percentage_of(buckets_for_objects, current_bucket), 32, 34)
+      && contains_elements_in_equal_sized_parts(buckets_for_objects,rest)
+  end
+
+  defp contains_elements_in_equal_sized_parts _, [] do
     true
   end
 
   defp between value, lower, upper do
     lower <= value && value <= upper
+  end
+
+  defp generate_random_values do
+    generate_randoms(12000)
   end
 
   defp generate_randoms(1) do
@@ -48,7 +60,8 @@ defmodule RendezvousTest do
 
   defp get_percentage_of(collection, object) do
     number_of_eq_to_object = Enum.filter(collection, fn(e) -> e == object end) |> Enum.count
-    Float.round(100 / Enum.count(collection) * number_of_eq_to_object,0)
+    result = Float.round(100 / Enum.count(collection) * number_of_eq_to_object,0)
+    result
   end
 
   defp get_buckets(objects,buckets) do
