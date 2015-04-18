@@ -3,10 +3,6 @@ Rendezvous
 
 Implementation of the Rendezvous or Highest Random Weight (HRW) hashing algorithm in the Elixir Programming Language ([elixir-lang.org](http://elixir-lang.org))
 
-## License
-
-Check [LICENSE](LICENSE) file for more information.
-
 ## Installation
 
 Add rendezvous as a dependency in your mix.exs file:
@@ -30,3 +26,7 @@ object = "Some object to put in bucket"
 buckets = ["bucket A", "bucket B", "bucket C"]
 Rendezvous.get(:sha, object, buckets)
 ```
+
+## License
+
+Check [LICENSE](LICENSE) file for more information.
