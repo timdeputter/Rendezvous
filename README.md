@@ -19,7 +19,7 @@ and run `mix deps.get`.
 
 ## Usage
 
-Use Rendezvous.get to obtain for an object the corresponding buckets from a list of buckets. The first parameter defines the hashing algorithm to use.
+Use Rendezvous.get to obtain for an object the corresponding bucket from a list of buckets. The first parameter defines the hashing algorithm to use.
 
 ```elixir
 object = "Some object to put in bucket"
