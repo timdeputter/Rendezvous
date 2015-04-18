@@ -1,7 +1,7 @@
 defmodule Rendezvous do
   def get algorithm, key, buckets do
-    {bucket, hash} = Enum.map(buckets, fn(b) -> get_bucket_with_hash(algorithm, b, key) end) 
-                      |> Enum.max_by fn {b, hash} -> hash end
+    {bucket, _hash} = Enum.map(buckets, fn(b) -> get_bucket_with_hash(algorithm, b, key) end) 
+                      |> Enum.max_by fn {_b, hash} -> hash end
     bucket
   end
 
