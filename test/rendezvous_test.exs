@@ -29,6 +29,11 @@ defmodule RendezvousTest do
     assert Enum.member? bucketsWithoutB, get_hrwbucket("AA",bucketsWithoutB)
   end
 
+  test "Determines for a given key the appropriate node in an elixir cluster" do
+    node = Rendezvous.get_node "A"
+    assert to_string Node.self == node
+  end
+
   defp contains_elements_in_equal_sized_parts buckets_for_objects, [current_bucket | rest] do
     between(get_percentage_of(buckets_for_objects, current_bucket), 32, 34)
       && contains_elements_in_equal_sized_parts(buckets_for_objects,rest)
