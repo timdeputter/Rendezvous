@@ -27,7 +27,7 @@ buckets = ["bucket A", "bucket B", "bucket C"]
 Rendezvous.get(:sha, object, buckets)
 ```
 
-or use Rendezvous.get_node to obtain a nodename the nodes in an elixir cluster:
+or use Rendezvous.get_node to obtain a nodename from the nodes in an elixir cluster:
 
 ```elixir
  Rendezvous.get_node object # returns name of elixir node
