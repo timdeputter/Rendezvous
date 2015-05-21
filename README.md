@@ -2,6 +2,7 @@ Rendezvous
 ==========
 
 [![Build Status](https://travis-ci.org/Puddah/Rendezvous.svg?branch=master)](https://travis-ci.org/Puddah/Rendezvous)
+[![Hex.pm package version](https://img.shields.io/hexpm/v/Rendezvous.svg?style=flat-square)](https://hex.pm/packages/Rendezvous)
 
 Implementation of the [Rendezvous or Highest Random Weight (HRW) hashing algorithm](https://en.wikipedia.org/wiki/Rendezvous_hashing) in the Elixir Programming Language ([elixir-lang.org](http://elixir-lang.org))
 
