@@ -1,8 +1,4 @@
-Rendezvous
-[![Build Status](https://travis-ci.org/Puddah/Rendezvous.svg?branch=master)](https://travis-ci.org/Puddah/Rendezvous)
-[![Hex.pm package version](https://img.shields.io/hexpm/v/Rendezvous.svg?style=flat)](https://hex.pm/packages/Rendezvous)
-[![Coverage Status](https://coveralls.io/repos/Puddah/Rendezvous/badge.svg?branch=master)](https://coveralls.io/r/Puddah/Rendezvous?branch=master)
-[![License](http://img.shields.io/hexpm/l/Rendezvous.svg?style=flat)](https://github.com/Puddah/Rendezvous/blob/master/LICENSE)
+Rendezvous [![Build Status](https://travis-ci.org/Puddah/Rendezvous.svg?branch=master)](https://travis-ci.org/Puddah/Rendezvous) [![Hex.pm package version](https://img.shields.io/hexpm/v/Rendezvous.svg?style=flat)](https://hex.pm/packages/Rendezvous) [![Coverage Status](https://coveralls.io/repos/Puddah/Rendezvous/badge.svg?branch=master)](https://coveralls.io/r/Puddah/Rendezvous?branch=master) [![License](http://img.shields.io/hexpm/l/Rendezvous.svg?style=flat)](https://github.com/Puddah/Rendezvous/blob/master/LICENSE)
 ==========
 
 Implementation of the [Rendezvous or Highest Random Weight (HRW) hashing algorithm](https://en.wikipedia.org/wiki/Rendezvous_hashing) in the Elixir Programming Language ([elixir-lang.org](http://elixir-lang.org))
