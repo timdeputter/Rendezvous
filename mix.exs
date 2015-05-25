@@ -5,13 +5,15 @@ defmodule Rendezvous.Mixfile do
     [app: :rendezvous,
      version: "0.0.1",
      description: "Implementation of the Rendezvous or Highest Random Weight (HRW) hashing algorithm",
-     elixir: "~> 1.0.0",
+     elixir: "~> 1.0",
      package: package,
-     deps: deps]
+     deps: deps,
+     test_coverage: [tool: ExCoveralls]
+    ]
   end
 
   defp deps do
-    []
+    [{:excoveralls, "~> 0.3", only: [:dev, :test]}]
   end
 
   defp package do
