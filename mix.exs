@@ -13,7 +13,7 @@ defmodule Rendezvous.Mixfile do
   end
 
   defp deps do
-    [{:excoveralls, "~> 0.3", only: [:dev, :test]}]
+    [{:excoveralls, "~> 0.3", only: [:dev, :test]},{:fitex, "~> 0.0.1"}]
   end
 
   defp package do
