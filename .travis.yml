@@ -13,7 +13,17 @@ elixir:
   - 1.0.1
   - 1.0.0
 
+before_script:
+  - git clone https://github.com/jeremyjh/dialyxir.git
+  - mix archive.build
+  - mix archive.install
+  - mix dialyzer.plt
+
+script:
+  - mix compile
+  - mix test
+  - mix dialyzer
+
 after_success:
   - mix compile
   - mix coveralls.travis
-  - mix dializer
