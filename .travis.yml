@@ -16,3 +16,4 @@ elixir:
 after_success:
   - mix compile
   - mix coveralls.travis
+  - mix dializer
