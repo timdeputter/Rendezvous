@@ -16,7 +16,7 @@ elixir:
 before_script:
   - git clone https://github.com/jeremyjh/dialyxir.git
   - mix archive.build
-  - mix archive.install
+  - mix archive.install --force
   - mix dialyzer.plt
 
 script:
