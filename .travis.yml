@@ -18,7 +18,6 @@ before_script:
   - cd dialyxir
   - mix archive.build
   - mix archive.install --force
-  - mix dialyzer.plt
   - cd ..
 
 script:
