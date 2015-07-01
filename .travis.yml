@@ -14,9 +14,8 @@ elixir:
   - 1.0.0
 
 before_script:
-  - mkdir dialyxir
-  - cd dialyxir
   - git clone https://github.com/jeremyjh/dialyxir.git
+  - cd dialyxir
   - mix archive.build
   - mix archive.install --force
   - mix dialyzer.plt
