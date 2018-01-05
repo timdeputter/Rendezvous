@@ -3,9 +3,7 @@ Rendezvous [![Build Status](https://travis-ci.org/timdeputter/Rendezvous.svg?bra
 
 Implementation of the [Rendezvous or Highest Random Weight (HRW) hashing algorithm](https://en.wikipedia.org/wiki/Rendezvous_hashing) in the Elixir Programming Language ([elixir-lang.org](http://elixir-lang.org))
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/djmiib8fLui6dxiM3HirctVk/timdeputter/Rendezvous'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/djmiib8fLui6dxiM3HirctVk/timdeputter/Rendezvous.svg' />
-</a>
+
 
 ## Installation
 
